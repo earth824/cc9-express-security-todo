@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.BOOLEAN,
         allowNull: false,
         defaultValue: false
-      }
+      },
+      imageUrl: DataTypes.STRING
     },
     {
       underscored: true

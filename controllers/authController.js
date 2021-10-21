@@ -87,7 +87,7 @@ exports.login = async (req, res, next) => {
       username: user.username
     };
 
-    const token = jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: 5 }); // '30d'
+    const token = jwt.sign(payload, process.env.JWT_SECRET_KEY, { expiresIn: 3600 }); // '30d'
     res.json({ message: 'success logged in', token });
   } catch (err) {
     next(err);
